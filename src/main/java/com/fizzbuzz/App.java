@@ -10,4 +10,12 @@ public class App
     {
         System.out.println( "Hello World!" );
     }
+
+    public String fizzOrBuzz(int indexedNumber) {
+        String value = "";
+        if (indexedNumber % 3 == 0) {
+            value = "fizz";
+        }
+        return value;
+    }
 }
