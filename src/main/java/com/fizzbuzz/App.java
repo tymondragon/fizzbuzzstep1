@@ -16,6 +16,9 @@ public class App
         if (indexedNumber % 3 == 0) {
             value = "fizz";
         }
+        else if (indexedNumber % 5 ==0) {
+            value = "buzz";
+        }
         return value;
     }
 }
