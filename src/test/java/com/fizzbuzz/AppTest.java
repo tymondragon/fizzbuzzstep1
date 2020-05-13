@@ -1,16 +1,15 @@
 package com.fizzbuzz;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
-
 import org.junit.Test;
+
+import static org.junit.Assert.*;
 
 /**
  * Unit test for simple App.
  */
 public class AppTest 
 {
-    private final App app = new App();
+    private final FizzBuzz fizzBuzz = new FizzBuzz();
     @Test
     public void shouldAnswerWithTrue()
     {
@@ -19,27 +18,32 @@ public class AppTest
 
     @Test
     public void shouldReturnFizz() {
-        assertEquals("Returns fizz", app.fizzOrBuzz(3), "fizz");
+        assertEquals("Returns fizz", fizzBuzz.fizzOrBuzz(3), "fizz");
     }
 
     @Test
     public void shouldReturnBuzz() {
-        assertEquals("Returns buzz", app.fizzOrBuzz(5), "buzz");
+        assertEquals("Returns buzz", fizzBuzz.fizzOrBuzz(5), "buzz");
     }
 
     @Test
     public void shouldReturnFizzbuzz() {
-        assertEquals("Returns fizzbuzz", app.fizzOrBuzz(15), "fizzbuzz");
+        assertEquals("Returns fizzbuzz", fizzBuzz.fizzOrBuzz(15), "fizzbuzz");
     }
 
     @Test
     public void shouldReturnNumber() {
-        assertEquals("Returns integer inserted when it is not divisible by 3 or 5", app.fizzOrBuzz(4), "4");
+        assertEquals("Returns integer inserted when it is not divisible by 3 or 5", fizzBuzz.fizzOrBuzz(4), "4");
     }
 
     //stringBuilder
     @Test
     public void shouldReturnAStringOfFizzbuzz() {
-        assertEquals("Returns a concatenated string result", app.buildString(5), "1 2 fizz 4 buzz");
+        assertEquals("Returns a concatenated string result", fizzBuzz.buildString(5), "1 2 fizz 4 buzz");
+    }
+
+    @Test
+    public void trimsWhiteSpace() {
+        assertNotEquals("String with tailing whitespace", fizzBuzz.buildString(5), "1 2 fizz 4 buzz ");
     }
 }

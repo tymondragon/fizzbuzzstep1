@@ -1,38 +1,22 @@
 package com.fizzbuzz;
 
+import java.util.Scanner;
+
 /**
  * Hello world!
  *
  */
-public class App 
+public class App
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
-    }
-
-    public String fizzOrBuzz(int indexedNumber) {
-        String value;
-        if (indexedNumber % 3 == 0 && indexedNumber % 5 == 0) {
-            value = "fizzbuzz";
-        }
-        else if (indexedNumber % 3 == 0) {
-            value = "fizz";
-        }
-        else if (indexedNumber % 5 ==0) {
-            value = "buzz";
-        }
-        else {
-            value = Integer.toString(indexedNumber);
-        }
-        return value;
-    }
-
-    public String buildString(int number) {
-        StringBuilder fizzBuzzString = new StringBuilder();
-        for (int i = 1; i <= number; i++) {
-            fizzBuzzString.append(fizzOrBuzz(i)).append(" ");
-        }
-        return fizzBuzzString.toString().trim();
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        final Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        final int length = scanner.nextInt();
+        scanner.close();
+        final String result = fizzBuzz.buildString(length);
+        System.out.print(result);
     }
 }
+
