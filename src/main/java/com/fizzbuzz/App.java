@@ -27,4 +27,12 @@ public class App
         }
         return value;
     }
+
+    public String buildString(int number) {
+        StringBuilder fizzBuzzString = new StringBuilder();
+        for (int i = 1; i <= number; i++) {
+            fizzBuzzString.append(fizzOrBuzz(i)).append(" ");
+        }
+        return fizzBuzzString.toString().trim();
+    }
 }

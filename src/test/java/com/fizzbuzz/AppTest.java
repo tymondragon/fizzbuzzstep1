@@ -36,4 +36,10 @@ public class AppTest
     public void shouldReturnNumber() {
         assertEquals("Returns integer inserted when it is not divisible by 3 or 5", app.fizzOrBuzz(4), "4");
     }
+
+    //stringBuilder
+    @Test
+    public void shouldReturnAStringOfFizzbuzz() {
+        assertEquals("Returns a concatenated string result", app.buildString(5), "1 2 fizz 4 buzz");
+    }
 }
