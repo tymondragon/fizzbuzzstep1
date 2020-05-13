@@ -26,4 +26,9 @@ public class AppTest
     public void shouldReturnBuzz() {
         assertEquals("Returns buzz", app.fizzOrBuzz(5), "buzz");
     }
+
+    @Test
+    public void shouldReturnFizzbuzz() {
+        assertEquals("Returns fizzbuzz", app.fizzOrBuzz(15), "fizzbuzz");
+    }
 }

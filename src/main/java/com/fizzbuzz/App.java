@@ -13,7 +13,10 @@ public class App
 
     public String fizzOrBuzz(int indexedNumber) {
         String value = "";
-        if (indexedNumber % 3 == 0) {
+        if (indexedNumber % 3 == 0 && indexedNumber % 5 == 0) {
+            value = "fizzbuzz";
+        }
+        else if (indexedNumber % 3 == 0) {
             value = "fizz";
         }
         else if (indexedNumber % 5 ==0) {
