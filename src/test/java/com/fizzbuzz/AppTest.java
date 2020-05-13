@@ -31,4 +31,9 @@ public class AppTest
     public void shouldReturnFizzbuzz() {
         assertEquals("Returns fizzbuzz", app.fizzOrBuzz(15), "fizzbuzz");
     }
+
+    @Test
+    public void shouldReturnNumber() {
+        assertEquals("Returns integer inserted when it is not divisible by 3 or 5", app.fizzOrBuzz(4), "4");
+    }
 }

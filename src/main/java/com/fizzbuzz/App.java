@@ -12,7 +12,7 @@ public class App
     }
 
     public String fizzOrBuzz(int indexedNumber) {
-        String value = "";
+        String value;
         if (indexedNumber % 3 == 0 && indexedNumber % 5 == 0) {
             value = "fizzbuzz";
         }
@@ -21,6 +21,9 @@ public class App
         }
         else if (indexedNumber % 5 ==0) {
             value = "buzz";
+        }
+        else {
+            value = Integer.toString(indexedNumber);
         }
         return value;
     }
